@@ -1,0 +1,143 @@
+git –version
+
+https://github.com/
+
+git init
+
+git config --global user.name"grbalas"
+
+git config --global user.email"grbalas@gmail.com"
+
+
+git pull origin master
+cat README.md
+git status
+git add "Sample1.txt"
+Ex : git add file1 file2 ( this also works)
+git commit -m " This is first commit in my local repository"
+
+Indexing available files
+-------------------------
+
+git add -A
+
+Committing multiple files :
+---------------------------
+
+git commit -a -m "committing multiple files"
+
+git commit -m "message" filename
+
+git push -u origin master	
+
+Log View :
+-------------
+$ git log
+
+Branch creation :
+-----------------
+
+git branch firstbranch
+
+Getting into the branch
+-----------------------
+
+git checkout firstbranch
+
+Merging :
+--------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ git merge firstbranch
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (firstbranch)
+$ git rebase master
+
+Pushing files to Central Repository :
+git push origin firstbranch
+git push origin master
+git push -u origin master
+
+Generating ssh KEY :
+--------------------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/MAHANTHGADDAM/.ssh/id_rsa):
+/c/Users/MAHANTHGADDAM/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/MAHANTHGADDAM/.ssh/id_rsa.
+Your public key has been saved in /c/Users/MAHANTHGADDAM/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:7+7f5ydwvx6R3zKr48xV3505iOQcLMUY6dTK6pI+ckw AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ
+The key's randomart image is:
++---[RSA 3072]----+
+|         .o      |
+|         o+.     |
+|        +..o     |
+|         +o     .|
+|        S. +   o.|
+|     E . .= + o.X|
+|    o o   .+ ++**|
+|   . * . . o.o.+*|
+|    +.o  o+o*o+*+|
++----[SHA256]-----+
+
+
+Reading generated SSH KEY :
+---------------------------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ cat  /c/Users/MAHANTHGADDAM/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCys9cRBK9dkwu3rKpNasJHOpBwDFLTkRrcIVwFAXuIrpQxc7aoSiZs3IfeCQZk7eRljuxy8qgo+HCB+kWfa2hh1ih6TJABB+hRpr2VXuF9Zlqhm7Fi7IcacZwIhuq/abVYnZCoN2HCHTkwtzI94/SHq29KHMr4/9bcteWt6jfkvLJVrOSFJAlvIwKvWjhkqzr3FG8XV2f91aRG94ZVqVxz/TaPGAbrrhSMhMTWbtmfdEx+vkha1ll+KEHS7uFiLhq82QCEuIHeT7eREiRuaE+iyWXLmyL5OzLDjB43+9TPIMMzZefoPt2vxoF16Us0giFH7E6TniubPRlFglXvHz6FZif2/MvqXobp3NgPqlea3/+l9h7UF8/wO9XgYpmnzBHs8wuqP46MyPo1nqlmHz1m73yHlK57PvE9qG5c+MJE+Aa/uK1b/zu+j1IBSTYuwnwDl8ZTdc5W2sGomy1ljqIzs5qcWFTll7t7vs9P8cej6KtVlwXSae/fsoHC27MAR1s= AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ
+
+Authorizing SSH Key from Local Repository:
+------------------------------------------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,13.234.176.102' (RSA) to the list of known hosts.
+Hi grbalas! You've successfully authenticated, but GitHub does not provide shell access
+
+Branch Pushing :
+---------------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (firstbranch)
+$ git push origin firstbranch
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (18/18), 1.58 KiB | 323.00 KiB/s, done.
+Total 18 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'firstbranch' on GitHub by visiting:
+remote:      https://github.com/grbalas/Sample-Central1/pull/new/firstbranch
+remote:
+To https://github.com/grbalas/Sample-Central1.git
+ * [new branch]      firstbranch -> firstbranch
+
+Reverting the previous version :
+------------------------------
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ git checkout  1698eca7 Revert1.txt
+Updated 1 path from 4b6e680
+
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+$ cat Revert1.txt
+Hello World -- Modified
+AzureAD+MAHANTHGADDAM@DESKTOP-C0FVCIJ MINGW64 /c/Sample Project1 (master)
+
+http:localhost:8080/job/mnp_Job1/build?token=12345
+
+https://www.youtube.com/watch?v=BvUkXrAAqjE
+
