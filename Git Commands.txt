@@ -140,3 +140,15 @@ http:localhost:8080/job/mnp_Job1/build?token=12345
 
 https://www.youtube.com/watch?v=BvUkXrAAqjE
 
+
+
+
+
+
+
+Git branch:
+git branch name
+git checkout branchname
+
+
+
