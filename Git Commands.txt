@@ -8,7 +8,6 @@ git config --global user.name"grbalas"
 
 git config --global user.email"grbalas@gmail.com"
 
-
 git pull origin master
 cat README.md
 git status
